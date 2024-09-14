@@ -7,4 +7,4 @@ Flask-Bcrypt
 Flask-SQLAlchemy
 Pillow
 Flask-Migratep
-sycopg2-binary
+sycopg2
