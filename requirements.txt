@@ -6,4 +6,5 @@ Flask-Login
 Flask-Bcrypt
 Flask-SQLAlchemy
 Pillow
-Flask-Migrate
+Flask-Migratep
+sycopg2-binary
