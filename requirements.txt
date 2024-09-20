@@ -23,6 +23,7 @@ debugpy
 decorator
 defusedxml
 executing
+email_validator
 fastjsonschema
 filelock
 Flask
