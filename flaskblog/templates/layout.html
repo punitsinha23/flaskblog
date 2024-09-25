@@ -8,7 +8,72 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+    <style>
+        /* Custom Font */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navbar Styling */
+        .navbar-dark.bg-steel {
+            background-color: #2c3e50;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #ecf0f1 !important;
+        }
+
+        .nav-link:hover {
+            color: #f39c12 !important;
+        }
+
+        /* Main Content Area */
+        main.container {
+            margin-top: 80px;
+        }
+
+        /* Sidebar Styling */
+        .content-section {
+            background-color: #f7f7f7;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section h3 {
+            color: #34495e;
+        }
+
+        .list-group-item {
+            background-color: #ecf0f1;
+            border: none;
+        }
+
+        .list-group-item:hover {
+            background-color: #bdc3c7;
+        }
+
+        /* Flash Message Styling */
+        .alert {
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Button Styling */
+        .btn-custom {
+            background-color: #3498db;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .btn-custom:hover {
+            background-color: #2980b9;
+        }
+
+    </style>
 
     {% if title %}
         <title>Flask Blog - {{ title }}</title>
@@ -44,6 +109,7 @@
         </div>
       </nav>
     </header>
+
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-8">
@@ -58,20 +124,20 @@
           {% endwith %}
           {% block content %}{% endblock %}
         </div>
+
         <div class="col-md-4">
           <div class="content-section">
             <h3>Our Sidebar</h3>
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Latest Posts</li>
-                <li class="list-group-item list-group-item-light">Announcements</li>
-                <li class="list-group-item list-group-item-light">Calendars</li>
-                <li class="list-group-item list-group-item-light">etc</li>
-              </ul>
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-light">Latest Posts</li>
+              <li class="list-group-item list-group-item-light">Announcements</li>
+              <li class="list-group-item list-group-item-light">Calendars</li>
+              <li class="list-group-item list-group-item-light">etc</li>
+            </ul>
           </div>
         </div>
       </div>
     </main>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
